@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminKategoriController;
+use App\Http\Controllers\AdminProdukController;
 use App\Http\Controllers\AdminUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,7 @@ Route::get('/', function () {
 });
 
 Route::prefix('/admin')->group(function () {
+    Route::resource('/produk', AdminProdukController::class);
     Route::resource('/kategori', AdminKategoriController::class);
     Route::resource('/user', AdminUserController::class);
 });
