@@ -18,9 +18,9 @@
             @endisset
 
             @csrf
-                <label for="">Nama Kategori</label>
+                <label for="">Nama Produk</label>
                 <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" 
-                placeholder="Nama kategori" value="{{ isset($produk) ? $produk->name : old('name') }}">
+                placeholder="Nama produk" value="{{ isset($produk) ? $produk->name : old('name') }}">
                     @error('name')
                         <div class="invalid-feedback">
                             {{ $message }}
