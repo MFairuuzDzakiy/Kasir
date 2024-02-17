@@ -47,9 +47,9 @@
                     </div>
                     <div class="col-md-8">
                        <div class="d-flex">
-                            <a href="?produk_id= {{ request('produk_id') }}$act=min&qty={{ $qty }}" class="btn btn-primary"><i class="fas fa-minus"></i></a>
+                            <a href="?produk_id={{ request('produk_id') }}&act=min&qty={{ $qty }}" class="btn btn-primary"><i class="fas fa-minus"></i></a>
                             <input type="number" value="{{ $qty }}" id="qty" class="form-control" name="qty">
-                            <button class="btn btn-primary"><i class="fas fa-plus"></i></button>
+                            <a href="?produk_id={{ request('produk_id') }}&act=plus&qty={{ $qty }}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
                        </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                         
                     </div>
                     <div class="col-md-8">
-                       <h5>Subtotal : Rp. 20000</h5>
+                       <h5>Subtotal : Rp. {{ $subtotal}}</h5>
                     </div>
                 </div>
 
